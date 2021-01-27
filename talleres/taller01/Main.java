@@ -3,12 +3,12 @@ public class Main
     public static void main(String[] args)
     {
         //Clase punto
-       /* Punto punto = new Punto(12,6);
+        Punto punto = new Punto(12,6);
         System.out.println("Clase punto: ");
         System.out.println("cordenada X: "+punto.CordenadaX()+", Codenada Y: "+punto.CordenadaY());
         System.out.println("Radio: "+ punto.Radio());
         System.out.println("Angulo: "+ punto.Angulo());
-        System.out.println("Distancia: "+ punto.Distancia(6,3)+"\n");*/
+        System.out.println("Distancia: "+ punto.Distancia(6,3)+"\n");
 
         //Clase Date
         Fecha fecha = new Fecha(11,05,1999);
