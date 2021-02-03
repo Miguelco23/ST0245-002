@@ -54,7 +54,15 @@ public class Taller2 {
 	* @return verdadero si hay un subconjunto el cual su suma = target
 	*/
 	private static boolean SumaGrupo(int start, int[] nums, int target) {
-		//...
+		if (start == nums.length){
+			return target == 0;
+		}
+		
+		boolean pongo = SumaGrupo(start+1, nums, target - nums[start]);
+		boolean noPongo = SumaGrupo(start+1, nums, target);
+
+		return pongo || noPongo;
+
 	}
 	
 	/**
