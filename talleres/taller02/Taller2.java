@@ -21,9 +21,16 @@ public class Taller2 {
 	*
 	* @return el máximo común divisor
 	*/
-	public static int gcd(int p, int q){
-		//...
-	}
+	public static int gcd(int p, int q)
+    	{
+        if(q==0)
+        {
+            	return a;
+        }else
+        {
+            	return gcd(b,a%b);
+        }
+    	}
 
 	/**
 	* @param nums entrada 2 arreglo de enteros positivos, sobre el cual vamos a interar 
@@ -89,8 +96,17 @@ public class Taller2 {
 	*
 	*/
 
-	private static void combinationsAux(String prefix, String s) {  
-		//...
-	}
+	private static void combinationsAux(String prefix, String s)
+    	{
+        if(s.length()==0)
+        {
+        	System.out.println(prefix);
+        }else
+        {
+            	combinationsAux(a + s.charAt(0), s.substring(1));
+            	combinationsAux(prefix, s.substring(1));
+        }
+    }
+
 
 }
