@@ -50,29 +50,43 @@ public class Taller3 {
 
 		
 	/**
-	*
-	* El método permutation es un auxiliar del proceso 
-	* @param str es la cadena a permutar
-	*/
-	public static void permutation(String str) {
-		permutation("", str); 
-	}
-	
-	/**
-	*
-	* El método permutationAux es el core del proceso, en el se busca conseguir
-	* las posibles permutaciones que puede tener la cadena str 
-	* @param str es la cadena a permutar
-	* @param prefix cadena auxiliar donde se guarda la cadena de salida
-	*
-	* Las cadenas de salida tienes una longitud de lenght de la cadena s
-	* Ej: para la cadena AB se tiene la salida: { ABC,ACB,BAC,BCA,CAB,CBA }
-	* donde los caracteres no se repiten pero el orden tiene un papel importante.
-	*
-	*/
-	private static void permutationAux(String prefix, String str) {
-		//...
-	}
-		
+     *
+     * El método permutation es un auxiliar del proceso
+     * @param s
+     * @param str es la cadena a permutar
+     */
+    public static void permutation(String s, String str)
+    {
+        permutation("", str);
+    }
+
+    /**
+     *
+     * El método permutationAux es el core del proceso, en el se busca conseguir
+     * las posibles permutaciones que puede tener la cadena str
+     * @param str es la cadena a permutar
+     * @param prefix cadena auxiliar donde se guarda la cadena de salida
+     *
+     * Las cadenas de salida tienes una longitud de lenght de la cadena s
+     * Ej: para la cadena AB se tiene la salida: { ABC,ACB,BAC,BCA,CAB,CBA }
+     * donde los caracteres no se repiten pero el orden tiene un papel importante.
+     *
+     */
+    private static void permutationAux(String prefix, String str)
+    {
+        int n = str.length();
+
+        if (n==0)
+        {
+            System.out.println("\'" + prefix + "\'");
+        }else
+        {
+            for(int i = 0; i< str.length(); i++)
+            {
+                permutation(prefix+str.charAt(i),str.substring(0,i)+str.substring(i+1,n));
+            }
+        }
+    }
+
 	
 }
