@@ -41,7 +41,7 @@ public class Taller3 {
 			System.out.println("Disk "+ n + " from "+ origen + " to "+ destino);
 	    }
 		else {
-	    	torresDeHannoiAux(n-1, origen, destino, auxiliar);
+	    	torresDeHannoiAux(n-1, origen, destino, intermedio);
 	    	System.out.println("Disk "+ n + " from "+ origen + " to "+ destino);
 	    	torresDeHannoiAux(n-1, intermedio, origen, destino);
 		}
