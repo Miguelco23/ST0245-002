@@ -20,8 +20,19 @@ public class Taller4 {
 	* @return la suma
 	*/
 	public static int arrayMax(int[] array, int n) {
-		//...
-	}
+		int i, max, temp;
+		max = array[n];
+
+		if(n = 0){
+			max = array[0];
+		}
+		if(n != 0){
+			temp = arrayMax(array, i );
+			if(temp > max)
+			max = temp;
+		}
+		return max;
+		}
     
     /**
 	* @param start es un contador, nos sirve para saber cuando debemos parar
