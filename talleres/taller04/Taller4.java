@@ -7,9 +7,8 @@ package Taller__4;
 *@autor Mauricio Toro, Camilo Paez
 *@version 1
 */
-public class Taller4 {
-    
-    
+public class Taller4 
+{    
     /**
 	* @param array es un arreglo de numeros enteros
 	* @param n la longitud del array anterior 
@@ -48,9 +47,12 @@ public class Taller4 {
 	*
 	* @return verdadero si hay una combinación que suponga el valor target, falso de lo contrario
 	*/
-	public static boolean groupSum(int start, int[] nums, int target) {
-        //...
-    }
+ 	public static boolean GroupSum(int start, int[] nums, int target)
+    	{
+       	 if (start >= nums.length) return target == 0;
+        	return GroupSum(start + 1, nums, target - nums[ start ])
+                || GroupSum( start +1 , nums, target);
+    	}
 	
 	
 	/**
@@ -60,7 +62,14 @@ public class Taller4 {
 	* @see <a href="https://es.wikipedia.org/wiki/Sucesi%C3%B3n_de_Fibonacci"> fibonnaci <a/>
 	* @return el valor encontrado en long dada la posible cantidad de bits
 	*/
-	public static long fibonacci(int n) { 
-		//... 
-	}
+	public static long fibonacci(int n)
+    	{
+        	if(n==0||n==1)
+		{
+           	 	return n;
+        	}else
+        	{
+            		return fibonacci(n-1)+fibonacci(n-2);
+        	}
+    	}
 }
