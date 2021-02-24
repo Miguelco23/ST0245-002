@@ -48,7 +48,22 @@ public class Taller5 {
     * mediante la anidación de funciones cíclicas (while/for/...)
     * 
     */
-    public static int[] insertionSort (int[] array){
-        //...
+    public static int[] insertionSort (int[] array)
+    {
+        int i, j, aux;
+     i=0;
+     while (i<array.length)
+     {
+         aux = array[i];
+         j = i-1;
+         while (j>=0 && array[j]>aux)
+         {
+             array[j+1]= array[j];
+             j=j-1;
+         }
+         array[j+1] = aux;
+         i=i+1;
+     }
+     return array;
     }    
 }
