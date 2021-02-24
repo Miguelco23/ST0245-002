@@ -18,7 +18,11 @@ public class Taller5 {
     * @return la suma de todos los numeros sumados.
     */
     public static int suma (int[]array){
-      //...
+      int sum=0;
+	    for(int i=0;i<array.length;i++){
+	    sum+=array[i];
+	}
+        return sum;
     }
     
     
