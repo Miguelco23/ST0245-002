@@ -47,7 +47,11 @@ public int size()
 // Inserta un dato en la posición index
 public void insert(int data, int index)
 {
-	...
+	Nodo a = this.getNodo(index-1);
+	Nodo n = new Nodo(data);
+	n.next = a.next;
+	a.next = n;
+	size++;
 }
 
 // Borra el dato en la posición index
