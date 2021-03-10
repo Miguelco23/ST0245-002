@@ -44,6 +44,18 @@ public int size()
 	return size
 }
 
+public void insertP(int a)
+{
+	Nodo n = new Nodo(a);
+	if(this.p == null)
+	{
+		this.p = n;
+	}
+	n.next = this.p;
+	this.p = n;
+	size++;
+}
+	
 // Inserta un dato en la posición index
 public void insert(int data, int index)
 {
