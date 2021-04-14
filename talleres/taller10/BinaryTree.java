@@ -20,7 +20,11 @@ public class BinaryTree {
 	*
 	*/
     public void insertar(int n) {
-        insertarAux(root, n);
+         if (root == null) {
+            root = new Node(n);
+        } else {
+            insertAux(root, n);
+        }
     }
     
     /**
@@ -30,7 +34,21 @@ public class BinaryTree {
 	* Inserta un dato respetando claro las desigualdades en el árbol
 	*/
     private void insertarAux(Node node, int n) {
-        //...
+        if (node == null) {
+            node = new Node(n);
+        }
+        if (n > node.data) {
+            if (node.right == null) {
+                node.right = new Node(n);
+            }
+            insertAux(node.right, n);
+        }
+        if (n < node.data) {
+            if (node.left == null) {
+                node.left = new Node(n);
+            }
+            insertAux(node.left, n);
+        }
     }
 
     /**
@@ -51,7 +69,17 @@ public class BinaryTree {
 	*/ 
 
 	private boolean buscarAux(Node node, int n) {
-	   //..
+	    if (node == null) {
+            return false;
+        }
+        if (n == node.data) {
+            return true;
+        }
+        if(n < node.data){
+		return buscarAux(node.left, n);
+	}else{
+		return buscarAux(node.right, n);
+	}
     }
 	
     /**
